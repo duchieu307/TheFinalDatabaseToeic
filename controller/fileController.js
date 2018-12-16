@@ -102,7 +102,7 @@ let createBaiDoc = (
 
 let find10DienTu = (callback) => {
     dataSchema.dientu.find({})
-        .limit(10)
+        .limit(20)
         .exec((err, docs) => {
             if (err) console.log(err)
             return callback(null, docs)
@@ -111,7 +111,7 @@ let find10DienTu = (callback) => {
 
 let find10TracNghiem = (callback) => {
     dataSchema.tracnghiem.find({})
-        .limit(10)
+        .limit(20)
         .exec((err, docs) => {
             if (err) console.log(err)
             return callback(null, docs)

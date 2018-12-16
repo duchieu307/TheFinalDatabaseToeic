@@ -60,7 +60,7 @@ Router.get("/test", requireLogin, (req, res) => {
             let listElem2 = tracnghiem.map((item, index) => `
                 <div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label"><h5>Câu hỏi ${index + 11} :</h5></label>
+                        <label class="col-sm-2 col-form-label"><h5>Câu hỏi ${index + 21} :</h5></label>
                         
                         <div class="col-sm-10">
                             <h5>${item.tnQuestionContent}</h5> 
@@ -72,7 +72,7 @@ Router.get("/test", requireLogin, (req, res) => {
                             <legend class="col-form-label col-sm-2 pt-0"><h5>Câu trả lời</h5></legend>
                             <div class="col-sm-10">
                                 <div class="form-check  ">
-                                    <input class="form-check-input " type="radio" name="AnswerValue${index + 11}" value="A">
+                                    <input class="form-check-input " type="radio" name="AnswerValue${index + 21}" value="A">
                                 
                                     <div class="col-sm-10">
                                         <h5>A. ${item.tnAnswer.AnswerAContent}</h5>
@@ -80,19 +80,19 @@ Router.get("/test", requireLogin, (req, res) => {
 
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="AnswerValue${index + 11}" value="B">
+                                    <input class="form-check-input" type="radio" name="AnswerValue${index + 21}" value="B">
                                     <div class="col-sm-10">
                                         <h5>B. ${item.tnAnswer.AnswerBContent}</h5>
                                     </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="AnswerValue${index + 11}" value="C">
+                                    <input class="form-check-input" type="radio" name="AnswerValue${index + 21}" value="C">
                                     <div class="col-sm-10">
                                         <h5>C. ${item.tnAnswer.AnswerCContent}</h5>
                                     </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="AnswerValue${index + 11}" value="D">
+                                    <input class="form-check-input" type="radio" name="AnswerValue${index + 21}" value="D">
                                     <div class="col-sm-10">
                                         <h5>D. ${item.tnAnswer.AnswerDContent}</h5>
                                     </div>
@@ -101,11 +101,12 @@ Router.get("/test", requireLogin, (req, res) => {
                             </div>
                         </div>
                     </fieldset>
-                    <input style="display:none" name="Question${index + 11}" value="${item._id}"></input>
+                    <input style="display:none" name="Question${index + 21}" value="${item._id}"></input>
                     </div> 
             `)
             FileController.find2BaiDoc((err, info) => {
                 let baidoc = info
+                // console.log(baidoc)
                 let listElem3 = (`
                     <div>
                         <div class="form-group">
@@ -612,8 +613,6 @@ Router.post("/test", async function (req, res) {
         _id: req.body.Question10,
         answer: req.body.AnswerValue10
     }
-
-    let tnAnsArr = []
     let q11 = {
         _id: req.body.Question11,
         answer: req.body.AnswerValue11
@@ -627,7 +626,7 @@ Router.post("/test", async function (req, res) {
         answer: req.body.AnswerValue13
     }
     let q14 = {
-        _id: req.body.Question14,
+        _id: req.body.Question10,
         answer: req.body.AnswerValue14
     }
     let q15 = {
@@ -651,9 +650,93 @@ Router.post("/test", async function (req, res) {
         answer: req.body.AnswerValue19
     }
     let q20 = {
-        _id: req.body.Question20,
+        _id: req.body.Question10,
         answer: req.body.AnswerValue20
     }
+
+
+    let tnAnsArr = []
+    let q21 = {
+        _id: req.body.Question21,
+        answer: req.body.AnswerValue21
+    }
+    let q22 = {
+        _id: req.body.Question22,
+        answer: req.body.AnswerValue22
+    }
+    let q23 = {
+        _id: req.body.Question23,
+        answer: req.body.AnswerValue23
+    }
+    let q24 = {
+        _id: req.body.Question24,
+        answer: req.body.AnswerValue24
+    }
+    let q25 = {
+        _id: req.body.Question25,
+        answer: req.body.AnswerValue25
+    }
+    let q26 = {
+        _id: req.body.Question26,
+        answer: req.body.AnswerValue26
+    }
+    let q27 = {
+        _id: req.body.Question27,
+        answer: req.body.AnswerValue27
+    }
+    let q28 = {
+        _id: req.body.Question28,
+        answer: req.body.AnswerValue28
+    }
+    let q29 = {
+        _id: req.body.Question29,
+        answer: req.body.AnswerValue29
+    }
+    let q30 = {
+        _id: req.body.Question30,
+        answer: req.body.AnswerValue30
+    }
+    let q31 = {
+        _id: req.body.Question31,
+        answer: req.body.AnswerValue31
+    }
+    let q32 = {
+        _id: req.body.Question32,
+        answer: req.body.AnswerValue32
+    }
+    let q33 = {
+        _id: req.body.Question33,
+        answer: req.body.AnswerValue33
+    }
+    let q34 = {
+        _id: req.body.Question34,
+        answer: req.body.AnswerValue34
+    }
+    let q35 = {
+        _id: req.body.Question35,
+        answer: req.body.AnswerValue35
+    }
+    let q36 = {
+        _id: req.body.Question36,
+        answer: req.body.AnswerValue36
+    }
+    let q37 = {
+        _id: req.body.Question37,
+        answer: req.body.AnswerValue37
+    }
+    let q38 = {
+        _id: req.body.Question38,
+        answer: req.body.AnswerValue38
+    }
+    let q39 = {
+        _id: req.body.Question39,
+        answer: req.body.AnswerValue39
+    }
+    let q40 = {
+        _id: req.body.Question40,
+        answer: req.body.AnswerValue40
+    }
+
 
     let bd1id = req.body.baidoc1id
     let Q41Value = req.body.Q41AnswerValue
@@ -676,9 +759,9 @@ Router.post("/test", async function (req, res) {
 
 
 
-    await dtAnsArr.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
+    await dtAnsArr.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20)
     console.log(dtAnsArr)
-    tnAnsArr.push(q11, q12, q13, q14, q15, q16, q17, q18, q19, q20)
+    tnAnsArr.push(q21, q22, q23, q24, q25, q26, q27, q28, q29, q30, q31.q32, q33, q34, q35, q36, q37, q38, q39, q40)
     FileController.checkDienTu(dtAnsArr, (err, dt) => {
         let dtScore = dt
         console.log("Diem dien tu", dtScore)
@@ -694,7 +777,7 @@ Router.post("/test", async function (req, res) {
                     let writeScore = dtScore + tnScore + bd1Score + bd2Score
                     console.log("Diem bai doc 2", bd2Score)
                     FileController.createUserScore(req.user._id, writeScore)
-                    res.send(req.user._id)
+                    // res.send(req.user._id)
                     res.redirect("http://localhost:5000/userscore")
 
                 })
